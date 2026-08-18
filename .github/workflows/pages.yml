@@ -26,10 +26,23 @@ jobs:
         uses: actions/checkout@v6
       - name: Configure Pages
         uses: actions/configure-pages@v5
+      - name: Build static AGENT site
+        run: |
+          mkdir -p _site
+          cp home.html _site/index.html
+          cp app.html _site/app.html
+          cp privacy.html _site/privacy.html
+          cp terms.html _site/terms.html
+          cp 404.html _site/404.html
+          cp manifest.webmanifest _site/manifest.webmanifest
+          cp favicon.svg _site/favicon.svg
+          cp robots.txt _site/robots.txt
+          cp service-worker.js _site/service-worker.js
+          cp .nojekyll _site/.nojekyll
       - name: Upload site
         uses: actions/upload-pages-artifact@v4
         with:
-          path: '.'
+          path: _site
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4
