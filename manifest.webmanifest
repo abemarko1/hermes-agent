@@ -1,0 +1,17 @@
+{
+  "name": "AGENT — Your Digital Workforce",
+  "short_name": "AGENT",
+  "description": "A personal agent operating system for building, discovering and controlling AI agents from one place.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#07090f",
+  "theme_color": "#07090f",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
